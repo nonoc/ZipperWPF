@@ -39,6 +39,8 @@ namespace ZipperWPF
         {
             try
             {
+                zipPath = lblPathOrigen.Content.ToString();
+                zipPath = lblPathOrigen.Content.ToString() + "\\" + zipPath.Split('\\')[zipPath.Split('\\').Count()-1] + ".zip";
                 ZipFile.CreateFromDirectory(lblPathOrigen.Content.ToString(), zipPath);
                 
             }
